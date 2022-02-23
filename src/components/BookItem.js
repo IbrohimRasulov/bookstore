@@ -20,7 +20,7 @@ const BookItem = () => (
       </div>
       <div className="progress">
         <div className="spinner">
-          <div className="spin"></div>
+          <div className="spin" />
           <div className="percent">
             <p>75%</p>
             <p>Completed</p>
