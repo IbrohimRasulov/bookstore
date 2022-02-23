@@ -2,7 +2,7 @@
 
 # Bookstore
 
-> "Math magicians" is a website for all fans of mathematics. It is a Single Page App (SPA) that allows users to make simple calculations and read a random math-related quote. By building this application, I learned how to use React.
+> The Bookstore is a website that allows you to display a list of books, add a book, remove a selected book. By building this application, I learned how to use Redux with React.
 
 ## Built With
 
@@ -11,7 +11,7 @@
 - JavaScript
 - React, Redux
 
-## Live Demo (If available)
+## Live Demo (Currently not available)
 
 [live demo link]()
 
