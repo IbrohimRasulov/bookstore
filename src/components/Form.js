@@ -1,6 +1,7 @@
 const Form = () => (
-    <form>
-      <h2>ADD NEW BOOK</h2>
+  <form>
+    <h2>ADD NEW BOOK</h2>
+    <div className="main-form">
       <input type="text" />
       <select name="categories" id="categories">
         <option value="fiction">Fiction</option>
@@ -13,7 +14,9 @@ const Form = () => (
         <option value="adventure">Adventure</option>
         <option value="health">Health</option>
       </select>
-    </form>
-  );
+      <button type="submit">ADD BOOK</button>
+    </div>
+  </form>
+);
 
 export default Form;

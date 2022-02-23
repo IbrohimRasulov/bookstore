@@ -3,20 +3,20 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 //? Components
 import Navbar from './components/Navbar';
-import BooksContainer from './components/BooksContainer';
-import CategoriesContainer from './components/CategoriesContainer';
+import Books from './components/Books';
+import Categories from './components/Categories';
 import Form from './components/Form';
 
 const App = () => (
   <Router>
     <div className="App">
       <Navbar />
-      {/* <div className="content">
+      <div className="content">
         <Routes>
-          <Route path="/books" element={<BooksContainer />} />
-          <Route path="/categories" element={<CategoriesContainer />} />
+          <Route path="/" element={<Books />} />
+          <Route path="/categories" element={<Categories />} />
         </Routes>
-      </div> */}
+      </div>
       <Form />
     </div>
   </Router>
