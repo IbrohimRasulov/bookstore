@@ -7,6 +7,7 @@ const Navbar = () => (
       <Link to="/books">BOOKS</Link>
       <Link to="/categories">CATEGORIES</Link>
     </div>
+    <div className="icon"></div>
   </nav>
 );
 
