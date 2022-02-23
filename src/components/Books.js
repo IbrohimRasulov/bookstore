@@ -1,7 +1,9 @@
-const Books = () => {
-  return (
-    <p>hello</p>
-  );
-}
+import BookItem from './BookItem';
+
+const Books = () => (
+  <div className="booklist">
+    <BookItem />
+  </div>
+);
 
 export default Books;

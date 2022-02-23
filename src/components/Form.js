@@ -4,6 +4,7 @@ const Form = () => (
     <div className="main-form">
       <input type="text" />
       <select name="categories" id="categories">
+        <option value="null">Categories</option>
         <option value="fiction">Fiction</option>
         <option value="fantasy">Fantasy</option>
         <option value="romance">Romance</option>
