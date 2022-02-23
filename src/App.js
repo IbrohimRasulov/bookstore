@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 // ? Components
 import Navbar from './components/Navbar';
-import Books from './components/Books';
+import Booklist from './components/Booklist';
 import Categories from './components/Categories';
 
 const App = () => (
@@ -12,7 +12,7 @@ const App = () => (
       <Navbar />
       <div className="content">
         <Routes>
-          <Route path="/" element={<Books />} />
+          <Route path="/" element={<Booklist />} />
           <Route path="/categories" element={<Categories />} />
         </Routes>
       </div>
