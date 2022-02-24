@@ -3,6 +3,7 @@ const Form = () => (
     <h2>ADD NEW BOOK</h2>
     <div className="main-form">
       <input type="text" />
+
       <select name="categories" id="categories">
         <option value="null">Categories</option>
         <option value="fiction">Fiction</option>
