@@ -1,5 +1,5 @@
 const Categories = () => (
-  <h1>Under construction</h1>
+  <h1 className="content-align">Under construction</h1>
 );
 
 export default Categories;

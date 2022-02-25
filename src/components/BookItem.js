@@ -1,22 +1,29 @@
-// Sample data
-const arr = [
-  { title: 'If qal\'asi maxbusi', category: 'fiction', id: 0 },
-  { title: 'Qalb ko\'zgusidagi illatlar', category: 'religious', id: 1 },
-  { title: 'Stive Jobs', category: 'development', id: 2 },
-];
+/* eslint-disable react/jsx-key */
+import React from 'react';
+import { useDispatch } from 'react-redux';
+import PropTypes from 'prop-types';
+import { removeBook } from '../redux/books/books';
 
-const BookItem = () => (
-  arr.map((book) => (
-    <div className="book-item" key={book.id}>
+const BookItem = (props) => {
+  const {
+    id,
+    author,
+    title,
+    category,
+  } = props;
+  const dispatch = useDispatch();
+
+  return (
+    <div className="book-item" key={id}>
       <div className="content">
-        <h4>{book.category}</h4>
-        <h3>{book.title}</h3>
-        <p>Author</p>
-        <ul>
-          <li>Comments</li>
-          <li>Remove</li>
-          <li>Edit</li>
-        </ul>
+        <h4>{category}</h4>
+        <h3>{title}</h3>
+        <p>{author}</p>
+        <div className="book-buttons">
+          <button type="button">Comments</button>
+          <button type="button" onClick={() => dispatch(removeBook(id))}>Remove</button>
+          <button type="button">Edit</button>
+        </div>
       </div>
       <div className="progress">
         <div className="spinner">
@@ -33,7 +40,14 @@ const BookItem = () => (
         </div>
       </div>
     </div>
-  ))
-);
+  );
+};
+
+BookItem.propTypes = {
+  category: PropTypes.string.isRequired,
+  author: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  id: PropTypes.string.isRequired,
+};
 
 export default BookItem;
