@@ -1,11 +1,12 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { v4 as uuidv4 } from 'uuid';
 import { addBook } from '../redux/books/books';
 
 const Form = () => {
   const [title, setTitle] = useState('');
-  const [author, setAuthor] = useState('Author');
+  const [author, setAuthor] = useState('');
+  const [category, setCategory] = useState('');
   const dispatch = useDispatch();
 
   const submitBookToStore = (title, author) => {
@@ -13,11 +14,18 @@ const Form = () => {
       id: uuidv4(),
       title,
       author,
+      category,
     };
 
     dispatch(addBook(newBook));
     setTitle('');
     setAuthor('');
+    setCategory('');
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    submitBookToStore(title, author);
   };
 
   return (
@@ -27,28 +35,30 @@ const Form = () => {
         <input
           type="text"
           placeholder="Title"
-          onChange={({ target }) => setTitle(target.value)}
+          onChange={(e) => setTitle(e.target.value)}
           value={title}
+          required
         />
         <input
           type="text"
           placeholder="Author"
-          onChange={({ target }) => setAuthor(target.value)}
+          onChange={(e) => setAuthor(e.target.value)}
           value={author}
+          required
         />
-        <select name="categories" id="categories">
-          <option value="null">Categories</option>
-          <option value="fiction">Fiction</option>
-          <option value="fantasy">Fantasy</option>
-          <option value="romance">Romance</option>
-          <option value="development">Development</option>
-          <option value="scifi">Sci-Fi</option>
-          <option value="history">History</option>
-          <option value="religious">Religious</option>
-          <option value="adventure">Adventure</option>
-          <option value="health">Health</option>
+        <select name="categories" id="categories" onChange={(e) => setCategory(e.target.value)}>
+          <option value="" selected disabled hidden>Categories</option>
+          <option value="Fiction">Fiction</option>
+          <option value="Fantasy">Fantasy</option>
+          <option value="Romance">Romance</option>
+          <option value="Development">Development</option>
+          <option value="Sci-Fi">Sci-Fi</option>
+          <option value="History">History</option>
+          <option value="Religious">Religious</option>
+          <option value="Adventure">Adventure</option>
+          <option value="Health">Health</option>
         </select>
-        <button type="submit" onSubmit={() => submitBookToStore(title, author)}>ADD BOOK</button>
+        <button type="submit" onClick={handleSubmit}>ADD BOOK</button>
       </div>
     </form>
   );

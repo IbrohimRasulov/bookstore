@@ -1,10 +1,10 @@
+import React from 'react';
 import { useSelector } from 'react-redux';
 import BookItem from './BookItem';
 import Form from './Form';
-import { selectBooks } from '../redux/books/books';
 
 const Booklist = () => {
-  const books = useSelector(selectBooks);
+  const books = useSelector((store) => store.booksReducer);
 
   return (
     <div className="booklist">
@@ -13,8 +13,8 @@ const Booklist = () => {
           key={book.id}
           id={book.id}
           title={book.title}
-          author={book.title}
-          category="Category"
+          author={book.author}
+          category={book.category}
         />
       ))}
       <Form />
