@@ -1,29 +1,25 @@
+import { useDispatch } from 'react-redux';
+import PropTypes from 'prop-types';
 import { removeBook } from '../redux/books/books';
 
-// Sample data
-// const arr = [
-//   { title: 'If qal\'asi maxbusi', category: 'fiction', id: 0 },
-//   { title: 'Qalb ko\'zgusidagi illatlar', category: 'religious', id: 1 },
-//   { title: 'Stive Jobs', category: 'development', id: 2 },
-// ];
+const BookItem = (props) => {
+  const {
+    id, author, title,
+  } = props;
 
-const removeBookFromStore = (title, author) => {
+  const dispatch = useDispatch();
 
-  // dispatch(removeBook(newBook));
-};
-
-const BookItem = () => (
-  arr.map((book) => (
-    <div className="book-item" key={book.id}>
+  return (
+    <div className="book-item" key={id}>
       <div className="content">
-        <h4>{book.category}</h4>
-        <h3>{book.title}</h3>
-        <p>Author</p>
-        <ul>
-          <li>Comments</li>
-          <li>Remove</li>
-          <li>Edit</li>
-        </ul>
+        <h4>Category</h4>
+        <h3>{title}</h3>
+        <p>{author}</p>
+        <div className="book-buttons">
+          <button type="button">Comments</button>
+          <button type="button" onClick={() => dispatch(removeBook(id))}>Remove</button>
+          <button type="button">Edit</button>
+        </div>
       </div>
       <div className="progress">
         <div className="spinner">
@@ -40,7 +36,13 @@ const BookItem = () => (
         </div>
       </div>
     </div>
-  ))
-);
+  );
+};
+
+BookItem.propTypes = {
+  author: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  id: PropTypes.string.isRequired,
+};
 
 export default BookItem;

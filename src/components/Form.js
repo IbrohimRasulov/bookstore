@@ -48,7 +48,7 @@ const Form = () => {
           <option value="adventure">Adventure</option>
           <option value="health">Health</option>
         </select>
-        <button type="submit" onSubmit={submitBookToStore}>ADD BOOK</button>
+        <button type="submit" onSubmit={() => submitBookToStore(title, author)}>ADD BOOK</button>
       </div>
     </form>
   );
