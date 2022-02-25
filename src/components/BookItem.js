@@ -1,9 +1,16 @@
+import { removeBook } from '../redux/books/books';
+
 // Sample data
-const arr = [
-  { title: 'If qal\'asi maxbusi', category: 'fiction', id: 0 },
-  { title: 'Qalb ko\'zgusidagi illatlar', category: 'religious', id: 1 },
-  { title: 'Stive Jobs', category: 'development', id: 2 },
-];
+// const arr = [
+//   { title: 'If qal\'asi maxbusi', category: 'fiction', id: 0 },
+//   { title: 'Qalb ko\'zgusidagi illatlar', category: 'religious', id: 1 },
+//   { title: 'Stive Jobs', category: 'development', id: 2 },
+// ];
+
+const removeBookFromStore = (title, author) => {
+
+  // dispatch(removeBook(newBook));
+};
 
 const BookItem = () => (
   arr.map((book) => (
