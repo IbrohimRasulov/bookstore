@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-key */
 import React from 'react';
 import { useSelector } from 'react-redux';
 import BookItem from './BookItem';

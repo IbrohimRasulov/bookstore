@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-key */
 import { Link } from 'react-router-dom';
 
 const Navbar = () => (
