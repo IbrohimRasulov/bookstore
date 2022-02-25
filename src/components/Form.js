@@ -30,35 +30,41 @@ const Form = () => {
 
   return (
     <form>
-      <h2>ADD NEW BOOK</h2>
-      <div className="main-form">
-        <input
-          type="text"
-          placeholder="Title"
-          onChange={(e) => setTitle(e.target.value)}
-          value={title}
-          required
-        />
-        <input
-          type="text"
-          placeholder="Author"
-          onChange={(e) => setAuthor(e.target.value)}
-          value={author}
-          required
-        />
-        <select name="categories" id="categories" onChange={(e) => setCategory(e.target.value)}>
-          <option value="" selected disabled hidden>Categories</option>
-          <option value="Fiction">Fiction</option>
-          <option value="Fantasy">Fantasy</option>
-          <option value="Romance">Romance</option>
-          <option value="Development">Development</option>
-          <option value="Sci-Fi">Sci-Fi</option>
-          <option value="History">History</option>
-          <option value="Religious">Religious</option>
-          <option value="Adventure">Adventure</option>
-          <option value="Health">Health</option>
-        </select>
-        <button type="submit" onClick={handleSubmit}>ADD BOOK</button>
+      <div className="content-align">
+        <h2>ADD NEW BOOK</h2>
+        <div className="main-form">
+          <input
+            type="text"
+            placeholder="Title"
+            onChange={(e) => setTitle(e.target.value)}
+            value={title}
+            required
+          />
+          <input
+            type="text"
+            placeholder="Author"
+            onChange={(e) => setAuthor(e.target.value)}
+            value={author}
+            required
+          />
+          <select
+            name="categories"
+            id="categories"
+            onChange={(e) => setCategory(e.target.value)}
+          >
+            <option hidden>Categories</option>
+            <option value="Fiction">Fiction</option>
+            <option value="Fantasy">Fantasy</option>
+            <option value="Romance">Romance</option>
+            <option value="Development">Development</option>
+            <option value="Sci-Fi">Sci-Fi</option>
+            <option value="History">History</option>
+            <option value="Religious">Religious</option>
+            <option value="Adventure">Adventure</option>
+            <option value="Health">Health</option>
+          </select>
+          <button type="submit" onClick={handleSubmit}>ADD BOOK</button>
+        </div>
       </div>
     </form>
   );

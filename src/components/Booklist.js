@@ -7,16 +7,18 @@ const Booklist = () => {
   const books = useSelector((store) => store.booksReducer);
 
   return (
-    <div className="booklist">
-      {books.map((book) => (
-        <BookItem
-          key={book.id}
-          id={book.id}
-          title={book.title}
-          author={book.author}
-          category={book.category}
-        />
-      ))}
+    <div className="main-content">
+      <div className="content-align booklist">
+        {books.map((book) => (
+          <BookItem
+            key={book.id}
+            id={book.id}
+            title={book.title}
+            author={book.author}
+            category={book.category}
+          />
+        ))}
+      </div>
       <Form />
     </div>
   );

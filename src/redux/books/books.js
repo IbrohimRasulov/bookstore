@@ -5,6 +5,12 @@ const initialState = [
   // { title: 'If qal\'asi maxbusi', category: 'fiction', id: 0 },
   // { title: 'Qalb ko\'zgusidagi illatlar', category: 'religious', id: 1 },
   // { title: 'Stive Jobs', category: 'development', id: 2 },
+  // { title: 'If qal\'asi maxbusi', category: 'fiction', id: 0 },
+  // { title: 'Qalb ko\'zgusidagi illatlar', category: 'religious', id: 1 },
+  // { title: 'Stive Jobs', category: 'development', id: 2 },
+  // { title: 'If qal\'asi maxbusi', category: 'fiction', id: 0 },
+  // { title: 'Qalb ko\'zgusidagi illatlar', category: 'religious', id: 1 },
+  // { title: 'Stive Jobs', category: 'development', id: 2 },
 ];
 
 export const addBook = (payload) => ({
