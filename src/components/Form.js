@@ -2,26 +2,28 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { v4 as uuidv4 } from 'uuid';
-import { addBook } from '../redux/books/books';
+import { addBookToAPI } from '../redux/books/books';
 
 const Form = () => {
   const [title, setTitle] = useState('');
   const [author, setAuthor] = useState('');
-  const [category, setCategory] = useState('Category');
+  const [category, setCategory] = useState('');
   const dispatch = useDispatch();
 
-  const submitBookToStore = (title, author) => {
-    const newBook = {
-      id: uuidv4(),
-      title,
-      author,
-      category,
-    };
+  const submitBookToStore = () => {
+    if (title && author && category) {
+      const newBook = {
+        id: uuidv4(),
+        title,
+        author,
+        category,
+      };
 
-    dispatch(addBook(newBook));
-    setTitle('');
-    setAuthor('');
-    setCategory('');
+      dispatch(addBookToAPI(newBook));
+      setTitle('');
+      setAuthor('');
+      setCategory('');
+    }
   };
 
   const handleSubmit = (e) => {
@@ -51,6 +53,7 @@ const Form = () => {
           <select
             name="categories"
             id="categories"
+            value={category}
             onChange={(e) => setCategory(e.target.value)}
             required
           >
