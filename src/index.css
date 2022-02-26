@@ -2,8 +2,8 @@
 
 :root {
   --blue: #3892ff;
-  --dark-gray: #c0c3c4;
-  --light-gray: ;
+  --dark-gray: #999;
+  --light-gray: #c0c3c4;
 }
 
 h1,
@@ -35,15 +35,20 @@ nav {
   border-bottom: 1px solid #ccc;
   background-color: #fff;
   padding: 20px 0;
+  display: flex;
+  align-items: center;
 }
 
 nav h1,
 nav .links {
   display: inline-block;
+  vertical-align: middle;
 }
 
 .links a {
-  padding-left: 30px;
+  padding-left: 40px;
+  color: var(--dark-gray);
+  text-decoration: none;
 }
 
 nav img {
@@ -52,6 +57,13 @@ nav img {
   padding: 8px;
   border-radius: 20px;
   border: 2px solid;
+  float: right;
+}
+
+nav div h1 {
+  font-size: 2rem;
+  color: var(--blue);
+  font-weight: bolder;
 }
 
 /* ! FORM */
