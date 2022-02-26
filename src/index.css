@@ -1,3 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --blue: #3892ff;
+  --dark-gray: #c0c3c4;
+  --light-gray: ;
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+span,
+button,
+a,
+select {
+  font-family: "Quicksand"; /* stylelint-disable-line font-family-no-missing-generic-family-keyword */
+}
+
 .content-align {
   width: 80%;
   margin: 0 auto;
@@ -24,6 +44,14 @@ nav .links {
 
 .links a {
   padding-left: 30px;
+}
+
+nav img {
+  width: 40px;
+  filter: invert(57%) sepia(72%) saturate(4466%) hue-rotate(197deg) brightness(104%) contrast(101%);
+  padding: 8px;
+  border-radius: 20px;
+  border: 2px solid;
 }
 
 /* ! FORM */
@@ -56,8 +84,4 @@ form {
 
 ::-webkit-scrollbar {
   display: none;
-}
-
-nav img {
-  width: 50px;
 }
