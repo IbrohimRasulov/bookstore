@@ -1,11 +1,17 @@
 /* eslint-disable react/jsx-key */
-import React from 'react';
-import { useSelector } from 'react-redux';
+import React, { useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 import BookItem from './BookItem';
 import Form from './Form';
+import { getBooksFromAPI } from '../redux/books/books';
 
 const Booklist = () => {
   const books = useSelector((store) => store.booksReducer);
+
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(getBooksFromAPI());
+  }, [dispatch]);
 
   return (
     <div className="main-content">
