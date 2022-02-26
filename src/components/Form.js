@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { v4 as uuidv4 } from 'uuid';
-import { addBookToAPI } from '../redux/books/books';
+import { addBook } from '../redux/books/books';
 
 const Form = () => {
   const [title, setTitle] = useState('');
@@ -19,7 +19,7 @@ const Form = () => {
         category,
       };
 
-      dispatch(addBookToAPI(newBook));
+      dispatch(addBook(newBook));
       setTitle('');
       setAuthor('');
       setCategory('');
@@ -41,21 +41,17 @@ const Form = () => {
             placeholder="Title"
             onChange={(e) => setTitle(e.target.value)}
             value={title}
-            required
           />
           <input
             type="text"
             placeholder="Author"
             onChange={(e) => setAuthor(e.target.value)}
             value={author}
-            required
           />
           <select
             name="categories"
             id="categories"
-            value={category}
             onChange={(e) => setCategory(e.target.value)}
-            required
           >
             <option hidden>Categories</option>
             <option value="Fiction">Fiction</option>
