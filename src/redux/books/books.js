@@ -39,6 +39,11 @@ export const addBookToAPI = (payload) => async (dispatch) => {
   await axios.post(API, bookToAPI);
 };
 
+export const removeBookFromAPI = (id) => async (dispatch) => {
+  dispatch(removeBook(id));
+  await axios.delete(`${API}/${id}`);
+};
+
 const reducer = (state = initialState, action) => {
   switch (action.type) {
     case ADD_BOOK:
