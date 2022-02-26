@@ -7,7 +7,7 @@ import { addBook } from '../redux/books/books';
 const Form = () => {
   const [title, setTitle] = useState('');
   const [author, setAuthor] = useState('');
-  const [category, setCategory] = useState('');
+  const [category, setCategory] = useState('Category');
   const dispatch = useDispatch();
 
   const submitBookToStore = (title, author) => {
@@ -52,6 +52,7 @@ const Form = () => {
             name="categories"
             id="categories"
             onChange={(e) => setCategory(e.target.value)}
+            required
           >
             <option hidden>Categories</option>
             <option value="Fiction">Fiction</option>
