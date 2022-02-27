@@ -13,7 +13,7 @@ https://user-images.githubusercontent.com/78875455/155864864-f6a4ab76-8f77-401d-
 - JavaScript
 - React, Redux
 
-## Live Demo (Currently not available)
+## Live Demo (Netlify)
 
 [live demo link]()
 
