@@ -2,7 +2,7 @@
 
 :root {
   --blue: #3892ff;
-  --dark-gray: #555;
+  --dark-gray: #666;
   --light-gray: #c0c3c4;
 }
 
@@ -10,6 +10,7 @@ h1,
 h2,
 h3,
 h4,
+h5,
 p,
 span,
 button,
@@ -117,6 +118,7 @@ form button {
   border: none;
   border-radius: 5px;
   font-weight: bold;
+  cursor: pointer;
 }
 
 /* ! BOOK LIST */
@@ -134,8 +136,89 @@ form button {
   background-color: #fff;
   margin: 20px 0;
   padding: 20px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
 }
 
 ::-webkit-scrollbar {
   display: none;
+}
+
+.content h4 {
+  color: var(--dark-gray);
+  font-weight: bolder;
+  padding-bottom: 10px;
+}
+
+.content h3 {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.content h5 {
+  padding: 5px 0 20px 0;
+  color: #5499cb;
+  font-size: 1.2rem;
+}
+
+.book-buttons button {
+  border: none;
+  background-color: white;
+  cursor: pointer;
+  padding: 0;
+  font-size: 0.9rem;
+  color: #5499cb;
+}
+
+.book-buttons span {
+  padding: 0 20px;
+  color: var(--light-gray);
+}
+
+.progress {
+  display: flex;
+  padding-right: 70px;
+  align-items: center;
+}
+
+.spin {
+  width: 70px;
+  height: 70px;
+  border-radius: 35px;
+  border: 5px solid #3487e7;
+  border-right: 5px solid #ddd ;
+  transform: rotate(225deg);
+  margin: 0 30px;
+}
+
+.spinner {
+  display: flex;
+}
+
+.percent h2 {
+  padding: 10px 60px 0 0;
+  font-size: 2rem;
+}
+.percent p {
+  color: var(--dark-gray);
+}
+
+.chapter {
+  border-left: 2px solid #ddd;
+  padding-left: 40px;
+}
+
+.chapter button {
+  color: white;
+  padding: 7px 20px;
+  background-color: var(--blue);
+  border: none;
+  border-radius: 3px;
+  margin-top: 15px;
+}
+
+.chapter h4 {
+  font-weight: lighter;
+  font-size: 0.8rem;
 }

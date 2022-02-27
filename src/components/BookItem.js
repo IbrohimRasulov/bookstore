@@ -18,10 +18,12 @@ const BookItem = (props) => {
       <div className="content">
         <h4>{category}</h4>
         <h3>{title}</h3>
-        <p>{author}</p>
+        <h5>{author}</h5>
         <div className="book-buttons">
           <button type="button">Comments</button>
+          <span>|</span>
           <button type="button" onClick={() => dispatch(removeBookFromAPI(id))}>Remove</button>
+          <span>|</span>
           <button type="button">Edit</button>
         </div>
       </div>
@@ -29,12 +31,12 @@ const BookItem = (props) => {
         <div className="spinner">
           <div className="spin" />
           <div className="percent">
-            <p>75%</p>
+            <h2>75%</h2>
             <p>Completed</p>
           </div>
         </div>
         <div className="chapter">
-          <p>CURRENT CHAPTER</p>
+          <h4>CURRENT CHAPTER</h4>
           <p>Chapter 17</p>
           <button type="button">UPDATE PROGRESS</button>
         </div>
