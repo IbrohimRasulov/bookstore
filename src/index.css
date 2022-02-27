@@ -1,3 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+:root {
+  --blue: #3892ff;
+  --dark-gray: #666;
+  --light-gray: #c0c3c4;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+span,
+button,
+a,
+select,
+input {
+  font-family: "Quicksand"; /* stylelint-disable-line font-family-no-missing-generic-family-keyword */
+}
+
 .content-align {
   width: 80%;
   margin: 0 auto;
@@ -15,15 +41,35 @@ nav {
   border-bottom: 1px solid #ccc;
   background-color: #fff;
   padding: 20px 0;
+  display: flex;
+  align-items: center;
 }
 
 nav h1,
 nav .links {
   display: inline-block;
+  vertical-align: middle;
 }
 
 .links a {
-  padding-left: 30px;
+  padding-left: 40px;
+  color: var(--dark-gray);
+  text-decoration: none;
+}
+
+nav img {
+  width: 40px;
+  filter: invert(57%) sepia(72%) saturate(4466%) hue-rotate(197deg) brightness(104%) contrast(101%);
+  padding: 8px;
+  border-radius: 20px;
+  border: 2px solid;
+  float: right;
+}
+
+nav div h1 {
+  font-size: 2rem;
+  color: var(--blue);
+  font-weight: bolder;
 }
 
 /* ! FORM */
@@ -34,7 +80,49 @@ form {
   bottom: 0;
   position: absolute;
   width: 100%;
-  padding: 20px;
+  padding: 20px 0;
+}
+
+form h2 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--dark-gray);
+}
+
+.main-form {
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+form input {
+  width: 28%;
+  padding: 7px 12px;
+  border: 2px solid var(--light-gray);
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+input::placeholder {
+  color: var(--light-gray);
+}
+
+form select {
+  width: 18%;
+  border: 2px solid var(--light-gray);
+  border-radius: 5px;
+  font-size: 1rem;
+  padding-left: 12px;
+}
+
+form button {
+  width: 12%;
+  color: white;
+  background-color: var(--blue);
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
 }
 
 /* ! BOOK LIST */
@@ -42,7 +130,7 @@ form {
 .booklist {
   height: 80vh;
   overflow-y: auto;
-  padding: 30px 0;
+  padding: 20px 0 80px 0;
 }
 
 /* ! BOOK ITEM */
@@ -50,14 +138,93 @@ form {
 .book-item {
   border: 1px solid #ccc;
   background-color: #fff;
-  margin: 10px 0;
+  margin: 20px 0;
   padding: 20px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
 }
 
-::-webkit-scrollbar {
-  display: none;
+.content h4 {
+  color: var(--dark-gray);
+  font-weight: bolder;
+  padding-bottom: 10px;
 }
 
-nav img {
-  width: 50px;
+.content h3 {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.content h5 {
+  padding: 5px 0 20px 0;
+  color: #5499cb;
+  font-size: 1.2rem;
+}
+
+.book-buttons button {
+  border: none;
+  background-color: white;
+  cursor: pointer;
+  padding: 0;
+  font-size: 0.9rem;
+  color: #5499cb;
+}
+
+.book-buttons span {
+  padding: 0 20px;
+  color: var(--light-gray);
+}
+
+.progress {
+  display: flex;
+  padding-right: 70px;
+  align-items: center;
+}
+
+.spin {
+  width: 70px;
+  height: 70px;
+  border-radius: 35px;
+  border: 5px solid #3487e7;
+  border-right: 5px solid #ddd;
+  transform: rotate(225deg);
+  margin: 0 30px;
+}
+
+.spinner {
+  display: flex;
+}
+
+.percent h2 {
+  padding: 10px 60px 0 0;
+  font-size: 2rem;
+}
+
+.percent p {
+  color: var(--dark-gray);
+}
+
+.chapter {
+  border-left: 2px solid #ddd;
+  padding-left: 40px;
+}
+
+.chapter button {
+  color: white;
+  padding: 7px 20px;
+  background-color: var(--blue);
+  border: none;
+  border-radius: 3px;
+  margin-top: 15px;
+}
+
+.chapter h4 {
+  font-weight: lighter;
+  font-size: 0.8rem;
+}
+
+.categories h1 {
+  text-align: center;
+  margin-top: 250px;
 }

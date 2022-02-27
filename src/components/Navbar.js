@@ -9,7 +9,7 @@ const Navbar = () => (
         <Link to="/">BOOKS</Link>
         <Link to="/categories">CATEGORIES</Link>
       </div>
-      <img src="" alt="user-logo" />
+      <img src="/user-large-solid.svg" alt="user-logo" />
     </div>
   </nav>
 );

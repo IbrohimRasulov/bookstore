@@ -4,6 +4,8 @@
 
 > The Bookstore is a website that allows you to display a list of books, add a book, remove a selected book. By building this application, I learned how to use Redux with React.
 
+https://user-images.githubusercontent.com/78875455/155864864-f6a4ab76-8f77-401d-a669-0d0f78c38a5a.mp4
+
 ## Built With
 
 - HTML
