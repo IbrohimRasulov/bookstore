@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
 
+::-webkit-scrollbar {
+  display: none;
+}
+
 :root {
   --blue: #3892ff;
   --dark-gray: #666;
@@ -141,10 +145,6 @@ form button {
   justify-content: space-between;
 }
 
-::-webkit-scrollbar {
-  display: none;
-}
-
 .content h4 {
   color: var(--dark-gray);
   font-weight: bolder;
@@ -187,7 +187,7 @@ form button {
   height: 70px;
   border-radius: 35px;
   border: 5px solid #3487e7;
-  border-right: 5px solid #ddd ;
+  border-right: 5px solid #ddd;
   transform: rotate(225deg);
   margin: 0 30px;
 }
@@ -200,6 +200,7 @@ form button {
   padding: 10px 60px 0 0;
   font-size: 2rem;
 }
+
 .percent p {
   color: var(--dark-gray);
 }
