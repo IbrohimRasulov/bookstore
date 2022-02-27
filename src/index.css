@@ -222,3 +222,8 @@ form button {
   font-weight: lighter;
   font-size: 0.8rem;
 }
+
+.categories h1 {
+  text-align: center;
+  margin-top: 250px;
+}
