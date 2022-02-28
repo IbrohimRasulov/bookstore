@@ -6,8 +6,12 @@
 
 :root {
   --blue: #3892ff;
+  --dark-blue: #3b85bb;
+  --light-gray: #f7f7f7;
+  --medium-light-gray: #ddd;
+  --medium-gray: #ccc;
+  --medium-dark-gray: #c0c3c4;
   --dark-gray: #666;
-  --light-gray: #c0c3c4;
 }
 
 h1,
@@ -32,13 +36,13 @@ input {
 body {
   margin: 0;
   padding: 0;
-  background-color: #f7f7f7;
+  background-color: var(--light-gray);
 }
 
 /* ! NAVBAR */
 
 nav {
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid var(--medium-gray);
   background-color: #fff;
   padding: 20px 0;
   display: flex;
@@ -52,9 +56,15 @@ nav .links {
 }
 
 .links a {
-  padding-left: 40px;
+  margin-left: 40px;
   color: var(--dark-gray);
   text-decoration: none;
+  padding: 0 10px;
+}
+
+.active {
+  border-bottom: 3px solid #f6646e;
+
 }
 
 nav img {
@@ -75,7 +85,7 @@ nav div h1 {
 /* ! FORM */
 
 form {
-  border-top: 1px solid #ccc;
+  border-top: 1px solid var(--medium-gray);
   background-color: #fff;
   bottom: 0;
   position: absolute;
@@ -98,18 +108,18 @@ form h2 {
 form input {
   width: 28%;
   padding: 7px 12px;
-  border: 2px solid var(--light-gray);
+  border: 1px solid var(--medium-light-gray);
   border-radius: 5px;
   font-size: 1rem;
 }
 
 input::placeholder {
-  color: var(--light-gray);
+  color: var(--medium-dark-gray);
 }
 
 form select {
   width: 18%;
-  border: 2px solid var(--light-gray);
+  border: 1px solid var(--medium-light-gray);
   border-radius: 5px;
   font-size: 1rem;
   padding-left: 12px;
@@ -117,7 +127,7 @@ form select {
 
 form button {
   width: 12%;
-  color: white;
+  color: #fff;
   background-color: var(--blue);
   border: none;
   border-radius: 5px;
@@ -136,7 +146,7 @@ form button {
 /* ! BOOK ITEM */
 
 .book-item {
-  border: 1px solid #ccc;
+  border: 1px solid var(--medium-gray);
   background-color: #fff;
   margin: 20px 0;
   padding: 20px;
@@ -154,26 +164,27 @@ form button {
 .content h3 {
   font-size: 1.8rem;
   font-weight: bold;
+  padding: 10px 0;
 }
 
 .content h5 {
-  padding: 5px 0 20px 0;
-  color: #5499cb;
-  font-size: 1.2rem;
+  padding-bottom: 20px;
+  color: var(--dark-blue);
+  font-size: 1.1rem;
 }
 
 .book-buttons button {
   border: none;
-  background-color: white;
+  background-color: #fff;
   cursor: pointer;
   padding: 0;
   font-size: 0.9rem;
-  color: #5499cb;
+  color: var(--dark-blue);
 }
 
 .book-buttons span {
   padding: 0 20px;
-  color: var(--light-gray);
+  color: var(--medium-light-gray);
 }
 
 .progress {
@@ -187,7 +198,7 @@ form button {
   height: 70px;
   border-radius: 35px;
   border: 5px solid #3487e7;
-  border-right: 5px solid #ddd;
+  border-right: 5px solid var(--medium-light-gray);
   transform: rotate(225deg);
   margin: 0 30px;
 }
@@ -206,12 +217,12 @@ form button {
 }
 
 .chapter {
-  border-left: 2px solid #ddd;
+  border-left: 2px solid var(--medium-light-gray);
   padding-left: 40px;
 }
 
 .chapter button {
-  color: white;
+  color: #fff;
   padding: 7px 20px;
   background-color: var(--blue);
   border: none;

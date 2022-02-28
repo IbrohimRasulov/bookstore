@@ -1,13 +1,15 @@
 /* eslint-disable react/jsx-key */
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 const Navbar = () => (
   <nav>
     <div className="content-align">
       <h1>Bookstore CMS</h1>
       <div className="links">
-        <Link to="/">BOOKS</Link>
-        <Link to="/categories">CATEGORIES</Link>
+        <NavLink to="/" className={({ isActive }) => (isActive ? 'active' : '')}>
+          BOOKS
+        </NavLink>
+        <NavLink to="/categories" className={({ isActive }) => (isActive ? 'active' : '')}>CATEGORIES</NavLink>
       </div>
       <img src="/user-large-solid.svg" alt="user-logo" />
     </div>
