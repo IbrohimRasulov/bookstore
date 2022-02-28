@@ -15,7 +15,7 @@ https://user-images.githubusercontent.com/78875455/155864864-f6a4ab76-8f77-401d-
 
 ## Live Demo (Netlify)
 
-[live demo link]()
+[live demo link](https://621b8a125bb76d000803cc2d--laughing-sinoussi-a7e57f.netlify.app/)
 
 ## Authors
 
